@@ -1,2 +1,16 @@
 title: Ranu Kundu
 theme: minima
+
+minima:
+  # Enables navigation bar links for pages
+  navigation:
+    - title: "Home"
+      url: "/"
+    - title: "About"
+      url: "/about/"
+    - title: "Projects"
+      url: "/projects/"
+    - title: "Blog"
+      url: "/blog/"
+    - title: "Contact"
+      url: "/contact/"
