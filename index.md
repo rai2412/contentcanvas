@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Ranu Kundu 
+title: My Resume
 ---
 
 # About Me
