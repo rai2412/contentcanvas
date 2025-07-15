@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Ranu Kundu | Portfolio
+title: Ranu Kundu 
 ---
 
-# 👋 Hi, I'm Ranu Kundu
+# About Me
 
 🎯 Content Strategist and Technical Writer passionate about customer experience
 
