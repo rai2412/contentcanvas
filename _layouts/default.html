@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <style>
+    body {
+      display: flex;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    nav {
+      width: 220px;
+      background-color: #f4f4f4;
+      padding: 1em;
+      height: 100vh;
+      box-sizing: border-box;
+      position: fixed;
+    }
+    nav a {
+      display: block;
+      margin-bottom: 1em;
+      color: #0366d6;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      margin-left: 240px;
+      padding: 2em;
+      max-width: 800px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h3>{{ site.title }}</h3>
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <a href="{{ '/about-me/' | relative_url }}">About Me</a>
+    <a href="{{ '/projects/' | relative_url }}">Projects</a>
+    <a href="{{ '/contact/' | relative_url }}">Contact</a>
+  </nav>
+  <main>
+    {{ content }}
+  </main>
+</body>
+</html>
