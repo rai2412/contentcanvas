@@ -1,0 +1,101 @@
+/* Light Mode Theme CSS */
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --link-color: #007acc;
+  --link-hover: #0056b3;
+  --accent-color: #2a5d9f;
+  --sidebar-bg: #f4f4f4;
+  --section-bg: #f9f9f9;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background-color: var(--sidebar-bg);
+  padding: 2em 1em;
+  width: 220px;
+  box-sizing: border-box;
+}
+
+.sidebar h2 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+.sidebar nav a {
+  display: block;
+  margin-bottom: 1em;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sidebar nav a:hover {
+  color: var(--link-hover);
+}
+
+.content {
+  padding: 2em;
+  max-width: 900px;
+  background-color: var(--section-bg);
+  flex-grow: 1;
+}
+
+.intro {
+  text-align: center;
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1em;
+  border: 3px solid var(--accent-color);
+}
+
+.skills ul {
+  list-style: square;
+  padding-left: 1.5em;
+}
+
+.projects article {
+  margin-bottom: 1.5em;
+}
+
+.projects article h3 a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.projects article h3 a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    padding: 1em;
+  }
+  .content {
+    padding: 1.5em;
+  }
+}
