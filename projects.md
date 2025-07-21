@@ -62,7 +62,8 @@ The final output
 •	Aligning the documentation with the developer journey 
  
 
-Improved documentation structure
+## Improved documentation structure
+![doc structure final](/assets/Picture9.png)
  
 
 
