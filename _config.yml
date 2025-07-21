@@ -1,5 +1,5 @@
 title: Home
-theme: jekyll-theme-dinky
+theme: minimal-mistakes-jekyll
 
 minima:
   # Enables navigation bar links for pages
