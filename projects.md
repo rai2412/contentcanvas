@@ -32,9 +32,10 @@ Engage with internal stakeholders (engineering team and product manager) to
 Analyzing real conversations across platforms (Slack, GitHub, Discord, forums, Twitter, support tickets, etc.) to extract insights about developer behavior, needs, and feedback.
 #### Content audit 
 List all content items across platforms (website, blog, YouTube, GitHub, Docs,) using Screaming Frog and evaluate whether the content aligns with current messaging or product features.
-![doc structure final](/assets/Picture2.png)
+
 #### Competitor analysis 
 Understand the key competitors in the market and asses the areas of improvement for the product documentation; analysis criteria included readability, clarity and completeness, visibility, and relevance.
+
 ![doc structure final](/assets/Picture3.png)
 
 #### Persona Analysis 
@@ -55,14 +56,13 @@ o	-- Align product and engineering around real developer experience
 #### Usability study
 Participated in evaluation of how AI developers interact with the AI library. It uncovered pain points, confusion, or inefficiencies in the user experience, things you won’t catch just by reading feedback or analytics.
 The usability studies help you:
+
 •	Identify friction in onboarding or docs
 •	Improve the developer experience (DX)
 •	Validate assumptions with real users
 •	Reduce support burden by catching confusing flows early
 •	Increase adoption and engagement
 
-![doc structure final](/assets/Picture6.png)
-![doc structure final](/assets/Picture7.png)
   
 #### Analytics 
 
