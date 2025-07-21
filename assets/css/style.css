@@ -37,6 +37,14 @@ body {
   text-decoration: underline;
 }
 
+.img-small {
+  width: 250px;
+  border-radius: 8px;
+  display: block;
+  margin: 1rem auto; /* centers image horizontally */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
 .content {
   flex: 1;
   padding: 2rem;
