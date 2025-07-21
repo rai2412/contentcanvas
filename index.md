@@ -21,19 +21,11 @@ I am a technical writer with **5 years of experience** crafting clear, concise, 
 
 ---
 
-<p align="center">
-  <em>“With empathy, resilience, and efficient communication you can win hearts and build a cohesive and friendly atmosphere to thrive together. ”</em>
-</p>
-
-
-## Projects
-
-### [Project One](https://github.com/uxlfoundation/oneDNN)
-> Description here.
-
-### [Project Two](https://github.com/john-dev/project2)
-> Description here.
-
 ## Contact
 - 📧 Email: ranu.kundu@gmail.com
 - 🔗 [LinkedIn](https://www.linkedin.com/in/ranukundu/)
+
+
+<p align="center">
+  <em>“ With empathy, resilience, and efficient communication you can win hearts and build a cohesive and friendly atmosphere to thrive together. ”</em>
+</p>
