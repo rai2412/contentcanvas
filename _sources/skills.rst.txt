@@ -1,3 +1,32 @@
 
 Skills
 ======
+
+Core Competencies
+-----------------
+
+* Content Strategy and Operations: Align business objectives, messaging startegy to deliver user-focused content.
+* Information Architecture and UX: Create UX and analytics-driven architectural solutions to effectively support business-critical personas.
+* Content Design and Interaction: Work with prototyping tools like Figma, Mural for efficient UX flows.
+* Developer Documentation: Create API documentation for developer-centric platforms and cloud services.
+* Cross-team Collaboration: Collaborate with product, UX, and engineering teams to deliver cohesive content solutions.
+
+
+Authoring Tools
+----------------
+
+Sphinx, Adobe RoboHelp, Oxygen XML Author, XMetal, Confluence, VSCode
+
+
+Markup and Programming Languages
+--------------------------------
+
+Markdown, RestructuredText, Asciidoc, XML, HTML, CSS, JavaScript, and Python
+
+UX/Design Tools
+---------------
+Figma, Mural
+
+Docs-as-Code and Version Control
+---------------------------------
+Git, GitHub, Bitbucket

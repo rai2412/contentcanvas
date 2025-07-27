@@ -1,4 +1,142 @@
 
 
-Portfolio
+Projects
 =========
+
+AI Library Documentation and Information Architecture
+------------------------------------------------------
+
+Project Overview
+################
+
+Improve the onboarding experience of open-source users for an AI performance library and ensure adoption and retention of users and devise an architectural solution that is navigable and intuitive. The goal was to make the links navigable and the content accessible so that the end users can quickly find what they need to get started. 
+ 
+The key deliverables were:
+
+* Create consistent and user-friendly architectural solution for an intuitive onboarding flow ensuring  smooth integration of the AI library into projects improving navigability and discoverability of critical resources
+* Recommend copy and design changes for the onboarding scenario
+
+My Role
+#######
+
+Being the content strategy lead of the project, I developed a content strategy framework that streamlines the onboarding experience for the library open-source users. 
+
+* Collboaretd with the UX researchers, to identify the friction points and usability issues. Understanding user needs and align content with user journey and complies with user flow. 
+* Participated in usability studies to assess pain points of the AI developers and map the areas of improvements on a developer journey map.
+* Attended meetings with engineering stakeholders, product managers, UX teams to align on the business goals and the content strategy.
+
+The Research
+-------------
+
+In order to create an experience that will resonate with the target audience, me along with the other stakeholders participated in the following.
+
+Research priorities
+
+* Identify the prominent persona who interacts with the library
+* Identify the key competitors in the marketplace and learn their documentation approach to support the onboarding experience
+
+Research Methods Used
+---------------------
+
+* **Stakeholder Interviews** - Engage with internal stakeholders (engineering team and product manager) to 
+
+* **Conversation Mining** - Analyzing real conversations across platforms (Slack, GitHub, Discord, forums, Twitter, support tickets, etc.) to extract insights about developer behavior, needs, and feedback.
+
+* **Content Audit** - List all content items across platforms (website, blog, YouTube, GitHub, Docs,) using Screaming Frog and evaluate whether the content aligns with current messaging or product features.
+
+* **Competitor Analysis** – Understand the key competitors in the market and asses the areas of improvement for the product documentation; analysis criteria included readability, clarity and completeness, visibility, and relevance.
+ 
+* **Persona Analysis** – Understand the job responsibilities, technology stacks the AI developers use. Identify the pain points and the opportunities of improvement in the developer journey. 
+ 
+* **Developer Journey Map** - Visualize the end-to-end experience of an AI developer interacting with the library from exploration to adoption and contribution phase. The journey mapping helped to unravel the following:
+
+  * Identify friction points in onboarding or usage
+  * Understand developer motivations and blockers
+  * Improve documentation, tooling, support, and community experience
+  * Align product and engineering around real developer experience
+
+  .. image:: images/djm.png
+    :width: 200
+    :alt: developer journey map
+ 
+* **Usability Study** - Participated in evaluation of how AI developers interact with the AI library. It uncovered pain points, confusion, or inefficiencies in the user experience, things you won’t catch just by reading feedback or analytics.
+
+* Analytics - 
+
+.. image:: images/analyticsmap.png
+  :width: 200
+  :alt: onednn analytics
+
+   
+The final output
+----------------
+
+* UX and analytics-led informational structure
+* Aligning the documentation with the developer journey 
+ 
+.. image:: images/journeymap.png
+  :width: 200
+  :alt: onednn doc structure final
+
+
+Improved documentation structure
+
+.. image:: images/website_onednn.png
+  :width: 300
+  :alt: onednn doc structure final
+
+Impact
+------
+
+* Achieved a 30% increase in user engagement by redesigning key user onboarding journey based on usage analytics, interviews, and competitive analysis.
+
+API Documentation
+-----------------
+ 
+Project Overview
+################
+
+My Role
+#######
+
+I was assigned to manage the entire suite of documentation, `BlueXP API documentation <https://docs.netapp.com/us-en/bluexp-automation/>`_  documenting technical specifications, API design, user guides, and reference documentation.
+
+I worked on:
+
+* Planning, designing and writing project, and product documentation for cloud applications.
+
+* Collating and editing technical project information from IT, release management, and business teams involved in system build, test, and deployment releases.
+
+* Test code samples in the API documentation using Postman in consultation with QA teams
+
+* Analyze feedback from end-users and create strategic plans to improve the documentation.
+
+* Creating API documentation for the BlueXP API documentation portal.
+
+Project deliverables
+--------------------
+
+* User Guides
+* Technical Specifications
+* API guides
+* Interface guides
+* FAQs
+
+
+.. image:: images/bluxp_concept.png
+  :width: 400
+  :alt: bluexp api concept
+
+.. image:: images/bluexp_api.png
+  :width: 400
+  :alt: bluexp ref doc
+
+Impact
+------
+
+* Authored content related to API authentication and authorization providing clarity on the grant types, types of tokens used that increased 30% traction on the documentation site
+
+* Authored and designed content for 30+ REST API workflows in documentation portal which resulted in 30% increase in developer experience and satisfaction
+
+* Created internal style guide to edit OpenAPI specification files improving efficiency of the team that reduced 10% editing errors
+
