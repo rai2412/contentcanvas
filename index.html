@@ -144,12 +144,13 @@
         }
 
         :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --bg: #0f172a;
-            --bg-secondary: #1e293b;
-            --text: #e2e8f0;
-            --text-dim: #94a3b8;
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --bg: #ffffff;
+            --bg-secondary: #f8fafc;
+            --text: #1e293b;
+            --text-dim: #64748b;
+            --border: #e2e8f0;
         }
 
         body {
@@ -164,11 +165,12 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(15, 23, 42, 0.8);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             padding: 1rem 2rem;
             z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
 
         nav ul {
@@ -203,7 +205,7 @@
         }
 
         #hero {
-            background: linear-gradient(135deg, var(--bg) 0%, var(--bg-secondary) 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
             position: relative;
             overflow: hidden;
         }
@@ -213,7 +215,7 @@
             position: absolute;
             width: 500px;
             height: 500px;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
             top: -250px;
             right: -250px;
             animation: float 20s infinite;
@@ -233,7 +235,7 @@
         h1 {
             font-size: 4rem;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--primary) 0%, #ec4899 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, #06b6d4 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -433,8 +435,8 @@
     <section id="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Your Name</h1>
-                <p class="subtitle">Full Stack Developer | Creative Problem Solver</p>
+                <h1>Ranu Kundu</h1>
+                <p class="subtitle">Technical Writer | Developer Documentation Specialist</p>
                 <a href="#contact" class="cta-button">Get In Touch</a>
             </div>
         </div>
