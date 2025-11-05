@@ -205,7 +205,7 @@
         }
 
         #hero {
-            background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #fefce8 100%);
             position: relative;
             overflow: hidden;
         }
@@ -215,7 +215,7 @@
             position: absolute;
             width: 500px;
             height: 500px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(234, 179, 8, 0.1) 0%, transparent 70%);
             top: -250px;
             right: -250px;
             animation: float 20s infinite;
@@ -232,10 +232,22 @@
             position: relative;
         }
 
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            border: 5px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(234, 179, 8, 0.3);
+            animation: fadeInUp 1s ease-out;
+            object-fit: cover;
+            display: block;
+        }
+
         h1 {
             font-size: 4rem;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--primary) 0%, #06b6d4 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, #f59e0b 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -277,7 +289,7 @@
         .cta-button:hover {
             background: var(--primary-dark);
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+            box-shadow: 0 10px 25px rgba(234, 179, 8, 0.3);
         }
 
         h2 {
@@ -296,14 +308,14 @@
             background: var(--bg-secondary);
             padding: 2rem;
             border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--border);
             transition: all 0.3s;
-            cursor: pointer;
+            position: relative;
         }
 
         .project-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 40px rgba(234, 179, 8, 0.2);
             border-color: var(--primary);
         }
 
@@ -321,14 +333,180 @@
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
+            margin-bottom: 1rem;
         }
 
         .tag {
-            background: rgba(99, 102, 241, 0.2);
-            color: var(--primary);
+            background: rgba(234, 179, 8, 0.15);
+            color: var(--primary-dark);
             padding: 0.25rem 0.75rem;
             border-radius: 20px;
             font-size: 0.875rem;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        .read-more-btn:hover {
+            background: var(--primary-dark);
+            transform: translateX(5px);
+        }
+
+        .project-page {
+            display: none;
+            min-height: 100vh;
+            padding: 6rem 2rem 2rem;
+        }
+
+        .project-page.active {
+            display: block;
+        }
+
+        .project-header {
+            max-width: 1200px;
+            margin: 0 auto 3rem;
+            text-align: center;
+        }
+
+        .project-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .project-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-dim);
+        }
+
+        .project-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-secondary);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .project-content h3 {
+            color: var(--primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .project-content h3:first-child {
+            margin-top: 0;
+        }
+
+        .project-content p {
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .project-content ul {
+            margin: 1rem 0 1.5rem 2rem;
+            color: var(--text);
+        }
+
+        .project-content li {
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 2rem;
+        }
+
+        .back-button:hover {
+            background: var(--primary-dark);
+            transform: translateX(-5px);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: transparent;
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 8px;
+            border: 2px solid var(--primary);
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .project-link:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .metric-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid var(--border);
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            color: var(--text-dim);
+            font-size: 0.9rem;
         }
 
         .skills-container {
@@ -341,7 +519,7 @@
             background: var(--bg-secondary);
             padding: 2rem;
             border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--border);
         }
 
         .skill-category h3 {
@@ -399,7 +577,7 @@
             text-align: center;
             padding: 2rem;
             color: var(--text-dim);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid var(--border);
         }
 
         @media (max-width: 768px) {
@@ -425,19 +603,18 @@
 <body>
     <nav>
         <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#hero" onclick="showMainPage()">Home</a></li>
+            <li><a href="#about" onclick="showMainPage()">About</a></li>
+            <li><a href="#projects" onclick="showMainPage()">Projects</a></li>
+            <li><a href="#experience" onclick="showMainPage()">Experience</a></li>
+            <li><a href="#contact" onclick="showMainPage()">Contact</a></li>
         </ul>
     </nav>
 
     <section id="hero">
         <div class="container">
             <div class="hero-content">
-                <img src="profile.jfif"></img>
-
+                <img src="profile.jfif" class="profile-photo" alt="Ranu Kundu">
                 <h1>Ranu Kundu</h1>
                 <p class="subtitle">Technical Writer | Content Strategist</p>
                 <a href="#contact" class="cta-button">Get In Touch</a>
@@ -483,34 +660,35 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <h3>Intel oneAPI oneDNN Documentation</h3>
-                    <p>Led content strategy redesign for Intel's Deep Neural Network Library documentation, implementing new information architecture based on user research and competitive analysis. Improved user satisfaction by 30% and readability by 20%.</p>
+                    <p>Led content strategy redesign for Intel's Deep Neural Network Library documentation, implementing new information architecture based on user research and competitive analysis.</p>
                     <div class="tech-tags">
                         <span class="tag">Sphinx</span>
                         <span class="tag">RestructuredText</span>
                         <span class="tag">Python</span>
                         <span class="tag">GitHub</span>
                     </div>
-                    <a href="https://uxlfoundation.github.io/oneDNN/index.html" target="_blank" style="display: inline-block; margin-top: 1rem; color: var(--primary); text-decoration: none;">View Documentation →</a>
+                    <button class="read-more-btn" onclick="showProject('onednn')">Read More →</button>
                 </div>
                 <div class="project-card">
                     <h3>NetApp BlueXP REST API Workflows</h3>
-                    <p>Designed and implemented structural framework for documenting cloud REST API workflows, increasing developer satisfaction by 20%. Managed automation program for API reference publishing.</p>
+                    <p>Designed and implemented structural framework for documenting cloud REST API workflows, increasing developer satisfaction by 20%.</p>
                     <div class="tech-tags">
                         <span class="tag">REST API</span>
                         <span class="tag">OpenAPI</span>
                         <span class="tag">Postman</span>
                         <span class="tag">YAML</span>
                     </div>
-                    <a href="https://docs.netapp.com/us-en/cloud-manager-automation/cm/workflow_processes.html" target="_blank" style="display: inline-block; margin-top: 1rem; color: var(--primary); text-decoration: none;">View Documentation →</a>
+                    <button class="read-more-btn" onclick="showProject('netapp')">Read More →</button>
                 </div>
                 <div class="project-card">
                     <h3>Technical Learning Paths</h3>
-                    <p>Developed comprehensive learning path courses for technical training with step-by-step instructions and expert content. Published books on Data Science including "Interactive Data Visualization with Python".</p>
+                    <p>Developed comprehensive learning path courses for technical training with step-by-step instructions and expert content. Published books on Data Science.</p>
                     <div class="tech-tags">
                         <span class="tag">Instructional Design</span>
                         <span class="tag">Python</span>
                         <span class="tag">Data Science</span>
                     </div>
+                    <button class="read-more-btn" onclick="showProject('learning')">Read More →</button>
                 </div>
                 <div class="project-card">
                     <h3>Portfolio & Content Canvas</h3>
@@ -520,11 +698,312 @@
                         <span class="tag">JavaScript</span>
                         <span class="tag">GitHub Pages</span>
                     </div>
-                    <a href="https://rai2412.github.io/contentcanvas/" target="_blank" style="display: inline-block; margin-top: 1rem; color: var(--primary); text-decoration: none;">View Portfolio →</a>
+                    <button class="read-more-btn" onclick="showProject('portfolio')">Read More →</button>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Project Detail Pages -->
+    <div id="project-onednn" class="project-page">
+        <div class="container">
+            <button class="back-button" onclick="showMainPage()">← Back to Projects</button>
+            
+            <div class="project-header">
+                <h2>Intel oneAPI Deep Neural Network Library Documentation</h2>
+                <div class="project-meta">
+                    <div class="project-meta-item">
+                        <span>📅</span>
+                        <span>July 2024 – September 2025</span>
+                    </div>
+                    <div class="project-meta-item">
+                        <span>🏢</span>
+                        <span>Intel Corporation, Ireland</span>
+                    </div>
+                </div>
+                <div class="tech-tags" style="justify-content: center; margin-top: 1rem;">
+                    <span class="tag">Sphinx</span>
+                    <span class="tag">RestructuredText</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">GitHub</span>
+                    <span class="tag">Content Strategy</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <h3>Project Overview</h3>
+                <p>Led a comprehensive content strategy redesign for Intel's oneAPI Deep Neural Network Library (oneDNN), a critical performance library for AI and machine learning developers. The project involved restructuring the entire documentation architecture to better serve developers and improve onboarding experiences.</p>
+
+                <div class="metrics">
+                    <div class="metric-card">
+                        <div class="metric-value">30%</div>
+                        <div class="metric-label">User Satisfaction Increase</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">20%</div>
+                        <div class="metric-label">Readability Score Improvement</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">10%</div>
+                        <div class="metric-label">Adoption Rate Increase</div>
+                    </div>
+                </div>
+
+                <h3>My Role & Responsibilities</h3>
+                <ul>
+                    <li>Conducted AI keyword research and competitive analysis to understand user needs and industry best practices</li>
+                    <li>Created detailed developer journey maps to identify content gaps and pain points in the existing documentation</li>
+                    <li>Performed comprehensive content audit of existing documentation to assess quality and identify areas for improvement</li>
+                    <li>Designed and implemented new information architecture aligned with business-critical personas</li>
+                    <li>Wrote Get Started guides that simplified the onboarding process for new users</li>
+                    <li>Provided editorial feedback on all documentation pull requests to maintain consistent tone and style</li>
+                </ul>
+
+                <h3>Key Achievements</h3>
+                <p><strong>Content Strategy Implementation:</strong> Developed and executed a data-driven content strategy using customer journey analytics and usability studies. This approach ensured that all content aligned with actual user flows and business objectives.</p>
+
+                <p><strong>Information Architecture Redesign:</strong> Created a new architectural solution that transformed how developers navigate and consume documentation. The structure followed industry best practices and was specifically tailored to support the library's key user personas.</p>
+
+                <p><strong>Quality Improvements:</strong> Restructured and rewrote the oneCCL Get Started Guide, improving document quality by 15%. Applied these learnings across other documentation to maintain consistency and high standards.</p>
+
+                <h3>Technical Skills Applied</h3>
+                <ul>
+                    <li>Documentation tools: Sphinx, RestructuredText, VSCode, Git/GitHub</li>
+                    <li>Content modeling and core content strategy principles</li>
+                    <li>UX research methodologies including journey mapping and usability testing</li>
+                    <li>Analytics-driven decision making for content optimization</li>
+                    <li>Cross-functional collaboration with engineering, product, and UX teams</li>
+                </ul>
+
+                <div class="project-links">
+                    <a href="https://uxlfoundation.github.io/oneDNN/index.html" target="_blank" class="project-link">
+                        View Live Documentation →
+                    </a>
+                    <a href="https://uxlfoundation.github.io/oneCCL/index.html" target="_blank" class="project-link">
+                        View oneCCL Documentation →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="project-netapp" class="project-page">
+        <div class="container">
+            <button class="back-button" onclick="showMainPage()">← Back to Projects</button>
+            
+            <div class="project-header">
+                <h2>NetApp BlueXP Cloud REST API Documentation</h2>
+                <div class="project-meta">
+                    <div class="project-meta-item">
+                        <span>📅</span>
+                        <span>March 2021 – June 2024</span>
+                    </div>
+                    <div class="project-meta-item">
+                        <span>🏢</span>
+                        <span>Bard na nGleann (Client: NetApp)</span>
+                    </div>
+                </div>
+                <div class="tech-tags" style="justify-content: center; margin-top: 1rem;">
+                    <span class="tag">REST API</span>
+                    <span class="tag">OpenAPI</span>
+                    <span class="tag">Postman</span>
+                    <span class="tag">YAML</span>
+                    <span class="tag">JIRA</span>
+                    <span class="tag">Confluence</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <h3>Project Overview</h3>
+                <p>As Technical Writer and Program Manager for NetApp's BlueXP cloud platform, I was responsible for creating comprehensive REST API documentation and managing the automation program for publishing auto-generated API reference content.</p>
+
+                <div class="metrics">
+                    <div class="metric-card">
+                        <div class="metric-value">20%</div>
+                        <div class="metric-label">Developer Satisfaction Increase</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">10%</div>
+                        <div class="metric-label">Reduction in Editing Errors</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">3+</div>
+                        <div class="metric-label">Years of Leadership</div>
+                    </div>
+                </div>
+
+                <h3>My Role & Responsibilities</h3>
+                <ul>
+                    <li>Created and maintained product documentation and REST API developer documentation for NetApp's cloud services</li>
+                    <li>Managed automation program for publishing auto-generated API reference content through NetApp docs platform</li>
+                    <li>Designed structural framework for documenting BlueXP cloud REST API workflows</li>
+                    <li>Tested code samples using Postman in collaboration with QA teams to ensure accuracy</li>
+                    <li>Created project plans using JIRA and Confluence to track progress and meet deadlines</li>
+                    <li>Analyzed end-user feedback and developed strategic plans for documentation improvements</li>
+                </ul>
+
+                <h3>Key Achievements</h3>
+                <p><strong>Workflow Documentation Framework:</strong> Developed and enforced a structural solution for documenting REST API workflows that significantly improved developer experience. This framework provided consistency across all API documentation and made complex workflows easier to understand.</p>
+
+                <p><strong>Template Creation:</strong> Created internal templates for structuring and editing OpenAPI specification files. This standardization improved team efficiency and reduced editing errors by 10%.</p>
+
+                <h3>Technical Skills Applied</h3>
+                <ul>
+                    <li>REST API documentation best practices and OpenAPI specification</li>
+                    <li>API testing tools: Postman for validating code samples and endpoints</li>
+                    <li>Project management: JIRA, Confluence, agile methodologies</li>
+                    <li>Content management systems and documentation platforms</li>
+                    <li>YAML, JSON, and API specification formats</li>
+                </ul>
+
+                <div class="project-links">
+                    <a href="https://docs.netapp.com/us-en/cloud-manager-automation/cm/workflow_processes.html" target="_blank" class="project-link">
+                        View API Workflows Documentation →
+                    </a>
+                    <a href="https://docs.netapp.com/us-en/ontap-sanhost/nvme_aix.html" target="_blank" class="project-link">
+                        View ONTAP Documentation →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="project-learning" class="project-page">
+        <div class="container">
+            <button class="back-button" onclick="showMainPage()">← Back to Projects</button>
+            
+            <div class="project-header">
+                <h2>Technical Learning Paths & Published Books</h2>
+                <div class="project-meta">
+                    <div class="project-meta-item">
+                        <span>📅</span>
+                        <span>May 2019 – June 2020</span>
+                    </div>
+                    <div class="project-meta-item">
+                        <span>🏢</span>
+                        <span>Packt Publishing Pvt. Ltd, India</span>
+                    </div>
+                </div>
+                <div class="tech-tags" style="justify-content: center; margin-top: 1rem;">
+                    <span class="tag">Instructional Design</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Data Science</span>
+                    <span class="tag">Technical Editing</span>
+                    <span class="tag">GitHub</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <h3>Project Overview</h3>
+                <p>As Course Managing Editor at Packt Publishing, I developed comprehensive learning path courses and managed the publication of technical books in the Data Science domain. This role combined instructional design, technical editing, and project management.</p>
+
+                <div class="metrics">
+                    <div class="metric-card">
+                        <div class="metric-value">2</div>
+                        <div class="metric-label">Published Books on Amazon</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">Multiple</div>
+                        <div class="metric-label">Learning Path Courses</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">12</div>
+                        <div class="metric-label">Months to Publication</div>
+                    </div>
+                </div>
+
+                <h3>My Role & Responsibilities</h3>
+                <ul>
+                    <li>Developed learning path courses with step-by-step instructions, expert screencasts, and optional assessments using instructional design techniques</li>
+                    <li>Managed publication of two Data Science books from conception through to market release</li>
+                    <li>Solicited and compiled reviews of manuscripts and revisions, providing comprehensive feedback to authors</li>
+                    <li>Coordinated with authors, acquisition editors, and layout coordinators to meet time-to-market goals</li>
+                    <li>Tested code in technical books hosted on GitHub repositories to ensure technical accuracy</li>
+                </ul>
+
+                <h3>Published Works</h3>
+                <p><strong>Interactive Data Visualization with Python:</strong> A comprehensive guide to creating interactive visualizations using Python libraries. The book covers modern visualization techniques and best practices for data presentation.</p>
+
+                <p><strong>The Data Wrangling Workshop:</strong> A hands-on workshop-style book focusing on data cleaning, transformation, and preparation techniques essential for data science workflows.</p>
+
+                <h3>Key Achievements</h3>
+                <p><strong>Instructional Design Excellence:</strong> Applied adult learning principles and instructional design methodologies to create engaging, effective learning materials. Structured content to support different learning styles and skill levels.</p>
+
+                <p><strong>Technical Accuracy:</strong> Ensured all code samples and technical content were accurate and functional by personally testing code repositories and working closely with technical reviewers.</p>
+
+                <p><strong>Project Management:</strong> Successfully managed multiple large-scale projects simultaneously, coordinating cross-functional teams to deliver quality publications on schedule.</p>
+
+                <h3>Skills Developed</h3>
+                <ul>
+                    <li>Instructional design principles and adult learning theory</li>
+                    <li>Technical editing and content development for Data Science domain</li>
+                    <li>Python programming and data visualization libraries</li>
+                    <li>GitHub repository management and code testing</li>
+                    <li>Project management and cross-functional team coordination</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="project-portfolio" class="project-page">
+        <div class="container">
+            <button class="back-button" onclick="showMainPage()">← Back to Projects</button>
+            
+            <div class="project-header">
+                <h2>Portfolio & Content Canvas</h2>
+                <div class="project-meta">
+                    <div class="project-meta-item">
+                        <span>📅</span>
+                        <span>Ongoing</span>
+                    </div>
+                    <div class="project-meta-item">
+                        <span>🏢</span>
+                        <span>Personal Project</span>
+                    </div>
+                </div>
+                <div class="tech-tags" style="justify-content: center; margin-top: 1rem;">
+                    <span class="tag">HTML/CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">GitHub Pages</span>
+                    <span class="tag">Content Strategy</span>
+                    <span class="tag">UX Design</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <h3>Project Overview</h3>
+                <p>Content Canvas is my personal portfolio website showcasing my technical writing work, content strategy projects, and developer documentation samples. The site demonstrates my ability to create user-friendly, well-structured content while highlighting my technical and design skills.</p>
+
+                <h3>Features & Content</h3>
+                <ul>
+                    <li>Portfolio of technical writing samples from various domains (AI/ML, cloud computing, APIs)</li>
+                    <li>Case studies demonstrating content strategy approaches and results</li>
+                    <li>Developer documentation examples showing my ability to write for technical audiences</li>
+                    <li>Blog posts about technical writing best practices and lessons learned</li>
+                    <li>Responsive design optimized for all devices</li>
+                </ul>
+
+                <h3>Technical Implementation</h3>
+                <p><strong>Frontend Development:</strong> Built using modern HTML5, CSS3, and vanilla JavaScript for optimal performance and compatibility. The site features a clean, professional design that puts the content first.</p>
+
+                <p><strong>Hosting & Deployment:</strong> Deployed on GitHub Pages for reliable, fast hosting. The repository structure follows best practices for static site organization.</p>
+
+                <p><strong>Content Organization:</strong> Applied information architecture principles to organize content logically and make it easy for visitors to find relevant examples and case studies.</p>
+
+                <h3>Design Philosophy</h3>
+                <p>The portfolio reflects my approach to technical writing: clear, accessible, and user-focused. The design is intentionally minimal to let the content speak for itself, while maintaining visual interest through thoughtful use of typography, whitespace, and color.</p>
+
+                <div class="project-links">
+                    <a href="https://rai2412.github.io/contentcanvas/" target="_blank" class="project-link">
+                        Visit Content Canvas →
+                    </a>
+                    <a href="https://github.com/ranukund" target="_blank" class="project-link">
+                        View GitHub Profile →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section id="experience">
         <div class="container">
@@ -590,14 +1069,14 @@
                     <a href="mailto:ranu.kundu@gmail.com">Email</a>
                 </div>
                 <p style="margin-top: 2rem; color: var(--text-dim);">
-                    📍 Dublin, Ireland | 📞 (+353) 899483321
+                    📍 Cork, Ireland | 📞 (+353) 899483321
                 </p>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Ranu Kundu. Technical Writer | Developer Documentation Specialist</p>
+        <p>&copy; 2025 Ranu Kundu. Technical Writer | Content Strategist</p>
     </footer>
 
     <script>
@@ -634,6 +1113,40 @@
             el.style.transition = 'all 0.6s ease-out';
             observer.observe(el);
         });
+
+        // Project page navigation
+        function showProject(projectId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Hide all project pages
+            document.querySelectorAll('.project-page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show the selected project page
+            document.getElementById('project-' + projectId).classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showMainPage() {
+            // Hide all project pages
+            document.querySelectorAll('.project-page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show all main sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'flex';
+            });
+            
+            // Scroll to top or projects section
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     </script>
 </body>
 </html>
