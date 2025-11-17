@@ -1292,6 +1292,18 @@
             animation: fadeIn 0.3s ease-in;
         }
 
+        .screenshot-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            border-bottom: 1px solid var(--border);
+        }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -1950,7 +1962,9 @@
                 <ul class="process-steps">
                     <li>
                         <strong>Step 1: Persona Analysis</strong>
-                        <span style="color: var(--text-light);">My first step was to understand the audience I'm writing for. I interviewed poduct and engineering teams at Intel to get an insight into the persoan, understand their typical workflow to onboard and get started with the library. </span>
+                        <span style="color: var(--text-light);">My first step was to understand the audience I'm writing for. I interviewed poduct and engineering teams at Intel to get an insight into the persoan, understand their typical workflow to onboard and get started with the library. 
+                        <img src="persona2.png" alt="persona" class="screenshot-image">
+                        </span>
                     </li>
                     <li>
                         <strong>Step 2: Content Audit</strong>
@@ -2001,25 +2015,23 @@
                 <ul class="pr-list">
                     <!-- ADD YOUR GITHUB PRs HERE -->
                     <li class="pr-item">
-                        <a href="#" target="_blank">
-                            <span>https://github.com/uxlfoundation/oneDNN/pull/3380</span>
-                            PR #123: Restructure Getting Started section with improved navigation
+                        <a href="https://github.com/uxlfoundation/oneDNN/pull/3380" target="_blank">
+                            <span></span>
+                            Restructure Getting Started section with improved navigation
                         </a>
                         <p class="pr-description">Redesigned the Getting Started section with step-by-step instructions, code examples, and clear learning path for key user persona.</p>
                     </li>
                     
                     <li class="pr-item">
-                        <a href="#" target="_blank">
-                            <span>https://github.com/uxlfoundation/oneDNN/pull/3376</span>
-                            PR #456: Add developer journey-based information architecture
+                        <a href="https://github.com/uxlfoundation/oneDNN/pull/3376" target="_blank">
+                            <span></span>
+                            Add developer journey-based information architecture
                         </a>
                         <p class="pr-description">Implemented new documentation structure based on user research and journey mapping, organizing content by tasks rather than technical components.</p>
                     </li>
                     
                     <li class="pr-item">
-                        <a href="#" target="_blank">
-                            <span>https://github.com/uxlfoundation/oneDNN/pull/3326</span>
-                            PR #789: Improve Exmples and Tutorials 
+                        <a href="https://github.com/uxlfoundation/oneDNN/pull/3326" target="_blank">Rewrote Exmples and Tutorials page to improve navigation
                         </a>
                         <p class="pr-description">Enhanced the Tutorials and Examples page with practical code examples, common use cases, and troubleshooting tips based on user feedback.</p>
                     </li>
@@ -2027,11 +2039,7 @@
                     <!-- You can add more PR items by copying the li.pr-item structure above -->
                 </ul>
                 
-                <div style="margin-top: 2rem; padding: 1rem; background: var(--hover); border-radius: 6px;">
-                    <p style="color: var(--text-light); font-size: 0.9rem; font-style: italic;">
-                        💡 Tip: Replace the placeholder links above with your actual GitHub PR URLs. You can add or remove PR items as needed by copying the list item structure.
-                    </p>
-                </div>
+                
             </section>
 
             <section>
@@ -2042,7 +2050,6 @@
                     <li>Performed comprehensive content audit of existing documentation</li>
                     <li>Designed and implemented new information architecture</li>
                     <li>Wrote Get Started guides that simplified onboarding</li>
-                    <li>Provided editorial feedback on all documentation pull requests</li>
                     <li>Collaborated with engineering and UX teams throughout the project</li>
                 </ul>
             </section>
