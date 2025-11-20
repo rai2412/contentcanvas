@@ -1681,7 +1681,7 @@
             <div class="hero">
                 <div class="profile-photo"><img src="profile.jfif" alt="Ranu Kundu" class="profile-photo"></div>
                 <div class="hero-content">
-                    <h1>Technical Writing Portfolio</h1>
+                    <h1>Portfolio</h1>
                     <p class="subtitle">Hi! I'm Ranu Kundu, a technical writer and an engineer experienced in creating high-impact documentation for AI performance libraries and developer APIs. With a background as a software engineer, I bring a strong technical foundation to technical writing and content strategy.</p>
                 </div>
             </div>
@@ -2499,7 +2499,286 @@
     </div>
 </section>
                     
-         
+         <!-- NEW SECTIONS TO ADD TO NETAPP PROJECT -->
+<!-- Add these sections after the API Documentation Sample section -->
+
+<!-- SECTION 1: WORKFLOW DOCUMENTATION -->
+<section>
+    <h2>API Workflow Documentation</h2>
+    <p style="color: var(--text-light); margin-bottom: 2rem;">Comprehensive workflow documentation for creating Cloud Volumes ONTAP systems using REST APIs.</p>
+
+    <div style="background: white; border: 1px solid var(--border); padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+        <h3 style="color: var(--text); font-size: 1.5rem; margin-bottom: 1rem;">Create a Cloud Volumes ONTAP System</h3>
+        <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 1.5rem;">
+            You can create a new Cloud Volumes ONTAP system using capacity-based licensing. You can add new volumes when creating the system.
+        </p>
+
+        <div style="background: rgba(0, 102, 204, 0.08); padding: 1rem; border-radius: 6px; margin-bottom: 1.5rem;">
+            <p style="color: var(--text); margin-bottom: 0.5rem;"><strong>Note:</strong> When using capacity-based license:</p>
+            <ul style="margin-left: 1.5rem; color: var(--text-light);">
+                <li>A marketplace subscription is required</li>
+                <li>If you purchase a license from NetApp (BYOL), a NetApp Support Site (NSS) key is required to register the system for support</li>
+            </ul>
+        </div>
+
+        <p style="color: var(--text-light); margin-bottom: 1rem;">You can add more volumes after creating the system. You can choose to create a volume using either NFS, CIFS, or iSCSI protocol.</p>
+
+        <!-- WORKFLOW TYPES -->
+        <h4 style="color: var(--text); margin: 1.5rem 0 1rem;">Choose the Workflow Based on Deployment Type:</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+            <div style="background: var(--hover); padding: 1.5rem; border-radius: 6px; border: 1px solid var(--border);">
+                <h5 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1.1rem;">Single Node</h5>
+                <p style="color: var(--text-light); font-size: 0.9rem; margin: 0;">Create a single node Cloud Volumes ONTAP system</p>
+            </div>
+            <div style="background: var(--hover); padding: 1.5rem; border-radius: 6px; border: 1px solid var(--border);">
+                <h5 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1.1rem;">HA Pair</h5>
+                <p style="color: var(--text-light); font-size: 0.9rem; margin: 0;">Create a high availability Cloud Volumes ONTAP system</p>
+            </div>
+        </div>
+
+        <!-- SINGLE NODE WORKFLOW -->
+        <div style="background: var(--hover); padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+            <h4 style="color: var(--primary); font-size: 1.3rem; margin-bottom: 1.5rem;">Create a System for a Single Node</h4>
+            
+            <div style="margin-bottom: 2rem;">
+                <h5 style="color: var(--text); margin-bottom: 1rem; font-size: 1.1rem;">Step 1: Select the Region</h5>
+                <p style="color: var(--text-light); margin-bottom: 0.5rem;">Perform the workflow <code style="background: white; padding: 0.2rem 0.5rem; border-radius: 4px;">Get regions</code> and choose the <code style="background: white; padding: 0.2rem 0.5rem; border-radius: 4px;">code</code> value for the <code style="background: white; padding: 0.2rem 0.5rem; border-radius: 4px;">region</code> parameter in step 11.</p>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <h5 style="color: var(--text); margin-bottom: 1rem; font-size: 1.1rem;">Step 2: Select the Workspace</h5>
+                <p style="color: var(--text-light); margin-bottom: 0.5rem;">Perform the workflow <code style="background: white; padding: 0.2rem 0.5rem; border-radius: 4px;">Get tenants</code> and choose the <code style="background: white; padding: 0.2rem 0.5rem; border-radius: 4px;">workspacePublicId</code> value for the <code style="background: white; padding: 0.2rem 0.5rem; border-radius: 4px;">tenantId</code> parameter in step 11.</p>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <h5 style="color: var(--text); margin-bottom: 1rem; font-size: 1.1rem;">Step 3: Select the Permutations Configuration</h5>
+                <p style="color: var(--text-light); margin-bottom: 0.5rem;">Perform the workflow <code style="background: white; padding: 0.2rem 0.5rem; border-radius: 4px;">Get permutations</code> and choose the <code style="background: white; padding: 0.2rem 0.5rem; border-radius: 4px;">ontapVersion</code> and <code style="background: white; padding: 0.2rem 0.5rem; border-radius: 4px;">license: type</code> and <code style="background: white; padding: 0.2rem 0.5rem; border-radius: 4px;">instanceType</code> values for the <code style="background: white; padding: 0.2rem 0.5rem; border-radius: 4px;">vsaMetadata</code> parameter in step 11.</p>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <h5 style="color: var(--text); margin-bottom: 1rem; font-size: 1.1rem;">Step 4: Select the Capacity Package Name</h5>
+                <p style="color: var(--text-light); margin-bottom: 1rem;">Choose the package name for the <code style="background: white; padding: 0.2rem 0.5rem; border-radius: 4px;">vsaMetadata:capacityPackageName</code> parameter in step 11.</p>
+                <div style="background: white; padding: 1rem; border-radius: 6px;">
+                    <p style="color: var(--text); margin-bottom: 0.5rem;"><strong>Three licensing options available:</strong></p>
+                    <ul style="margin-left: 1.5rem; color: var(--text-light);">
+                        <li>Professional</li>
+                        <li>Essentials</li>
+                        <li>Freemium</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <h5 style="color: var(--text); margin-bottom: 1rem; font-size: 1.1rem;">Step 11: Create the System</h5>
+                <p style="color: var(--text-light); margin-bottom: 1rem;">You can issue a REST API call to create the system.</p>
+                
+                <h6 style="color: var(--text); margin-bottom: 0.5rem;">HTTP Method and Endpoint</h6>
+                <table style="width: 100%; border-collapse: collapse; margin-bottom: 1.5rem;">
+                    <thead>
+                        <tr style="background: white; text-align: left;">
+                            <th style="padding: 0.75rem; border: 1px solid var(--border); width: 30%;">HTTP Method</th>
+                            <th style="padding: 0.75rem; border: 1px solid var(--border);">Path</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 0.75rem; border: 1px solid var(--border);"><code>POST</code></td>
+                            <td style="padding: 0.75rem; border: 1px solid var(--border);"><code>/occm/api/vsa/working-environments</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h6 style="color: var(--text); margin-bottom: 0.5rem;">cURL Example</h6>
+                <pre style="background: #f5f5f5; padding: 1rem; border-radius: 6px; overflow-x: auto; margin-bottom: 1.5rem;"><code>curl --request POST \
+--location "https://api.bluexp.netapp.com/occm/api/vsa/working-environments" \
+--header "x-agent-id: &lt;AGENT_ID&gt;" \
+--header "Authorization: Bearer &lt;ACCESS_TOKEN&gt;" \
+--header "Content-Type: application/json" \
+--d @JSONinput</code></pre>
+
+                <h6 style="color: var(--text); margin-bottom: 0.5rem;">JSON Input Example</h6>
+                <pre style="background: #f5f5f5; padding: 1rem; border-radius: 6px; overflow-x: auto;"><code>{
+  "name": "bycapacitycvo",
+  "tenantId": "workspace-ksJa8vEY",
+  "region": "us-east-1",
+  "packageName": "aws_custom",
+  "dataEncryptionType": "AWS",
+  "vsaMetadata": {
+    "ontapVersion": "ONTAP-9.11.1RC1.T1",
+    "licenseType": "capacity-paygo",
+    "instanceType": "m5.2xlarge",
+    "capacityPackageName": "Professional"
+  },
+  "writingSpeedState": "NORMAL",
+  "svmPassword": "password",
+  "vpcId": "vpc-a762xx00",
+  "ebsVolumeType": "gp3",
+  "ebsVolumeSize": {
+    "size": 1,
+    "unit": "TB"
+  }
+}</code></pre>
+            </div>
+        </div>
+
+        <!-- GITHUB PR REFERENCE -->
+        <div style="background: rgba(0, 102, 204, 0.08); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary);">
+            <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.1rem;">📝 GitHub Pull Request</h4>
+            <p style="color: var(--text-light); margin-bottom: 1rem;">View the complete workflow documentation with all steps and examples:</p>
+            <a href="[ADD YOUR GITHUB PR URL HERE]" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 0.5rem;">
+                🔗 View PR: Create Cloud Volumes ONTAP System Workflow
+            </a>
+            <p style="color: var(--text-light); font-size: 0.85rem; margin-top: 0.5rem; font-style: italic;">
+                💡 Replace "[ADD YOUR GITHUB PR URL HERE]" with your actual pull request URL
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 2: API CONCEPTUAL CONTENT - AUTHENTICATION -->
+<section>
+    <h2>API Conceptual Content: Authentication & Tokens</h2>
+    <p style="color: var(--text-light); margin-bottom: 2rem;">Understanding authentication models and access tokens for BlueXP REST API.</p>
+
+    <!-- ACCESS TOKENS OVERVIEW -->
+    <div style="background: white; border: 1px solid var(--border); padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+        <h3 style="color: var(--text); font-size: 1.5rem; margin-bottom: 1rem;">Access Tokens</h3>
+        <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 1rem;">
+            There are two types of access tokens that can be used to establish identity and authorization as part of performing a REST API call. The user access token is generally more common with customer automation applications.
+        </p>
+    </div>
+
+    <!-- AUTHENTICATION MODELS -->
+    <div style="background: white; border: 1px solid var(--border); padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+        <h3 style="color: var(--text); font-size: 1.5rem; margin-bottom: 1rem;">Authentication Models</h3>
+        <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 1.5rem;">
+            There are two authentication models available when requesting a user access token. The one you select depends on your authentication environment. Each authentication model is supported through a different grant type.
+        </p>
+
+        <!-- FEDERATED AUTHENTICATION -->
+        <div style="margin-bottom: 2rem;">
+            <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">Federated Authentication</h4>
+            <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 1rem;">
+                Federated authentication allows multiple identity domains to be joined, providing shared access to resources across separate enterprise organizations. Each organization maintains its own identity management system which is recognized by the other participating organizations.
+            </p>
+            <div style="background: var(--hover); padding: 1rem; border-radius: 6px;">
+                <p style="color: var(--text); margin: 0;">
+                    <strong>Key Point:</strong> Users who sign in using a federated user account must first generate a long-lived refresh token.
+                </p>
+            </div>
+        </div>
+
+        <!-- NON-FEDERATED AUTHENTICATION -->
+        <div style="margin-bottom: 2rem;">
+            <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">Non-Federated Authentication</h4>
+            <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 1rem;">
+                Non-federated authentication is based on identity and resource access within a single domain.
+            </p>
+            <div style="background: var(--hover); padding: 1rem; border-radius: 6px;">
+                <p style="color: var(--text); margin: 0;">
+                    <strong>Key Point:</strong> Users who sign in using a non-federated user account can obtain either a long-lived refresh token or a regular access token.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- USER TOKEN STRUCTURE -->
+    <div style="background: white; border: 1px solid var(--border); padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+        <h3 style="color: var(--text); font-size: 1.5rem; margin-bottom: 1rem;">Contents of a User Token</h3>
+        <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 1.5rem;">
+            A user token is formatted as a standard JWT token and contains information about an individual user. It normally includes the following fields:
+        </p>
+
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 1.5rem;">
+            <thead>
+                <tr style="background: var(--hover); text-align: left;">
+                    <th style="padding: 0.75rem; border: 1px solid var(--border); width: 25%;">Field</th>
+                    <th style="padding: 0.75rem; border: 1px solid var(--border);">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 0.75rem; border: 1px solid var(--border);"><code>Header</code></td>
+                    <td style="padding: 0.75rem; border: 1px solid var(--border);">JSON object encoded using base64url encoding. Contains information about the encryption algorithm used to encode the token and the public key ID for token validation.</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.75rem; border: 1px solid var(--border);"><code>Standard claims</code></td>
+                    <td style="padding: 0.75rem; border: 1px solid var(--border);">JSON payload contains the user identification information, audience, the expiration time, scope of resource access given to the user.</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.75rem; border: 1px solid var(--border);"><code>Custom claims</code></td>
+                    <td style="padding: 0.75rem; border: 1px solid var(--border);">Contains customized information of the user for example, the full name of the user, and so on.</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.75rem; border: 1px solid var(--border);"><code>Signature</code></td>
+                    <td style="padding: 0.75rem; border: 1px solid var(--border);">Used to validate the issuer and the encoded message in the token.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- TOKEN EXAMPLE -->
+        <h4 style="color: var(--text); margin: 1.5rem 0 1rem;">Example of a User Access Token</h4>
+        
+        <div style="margin-bottom: 1.5rem;">
+            <h5 style="color: var(--text); margin-bottom: 0.5rem; font-size: 0.95rem;">Complete Token:</h5>
+            <pre style="background: #f5f5f5; padding: 1rem; border-radius: 6px; overflow-x: auto; font-size: 0.85rem;"><code>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik16VTNRa0kyUlRFeFJqZzVNRE5EUWpORl
+JVVTNRVVpCTlVGQ05URkJRVFpDTWtFMVFqZzFSZyJ9.eyJodHRwOi8vY2xvdWQubmV0YXBwLmNvbS9md
+WxsX25hbWUiOiJSYW51IEt1bmR1IiwiaHR0cDovL2Nsb3VkLm5ldGFwcC5jb20vZW1haWxfdmVyaWZpZ
+WQiOnRydWUsImh0dHA6Ly9jbG91ZC5uZXRhcHAuY29tL2Nvbm5lY3Rpb25faWQiOiJjb25fZ1BqZmNzM
+zVTUGZpemg0YiIsImlzcyI6Imh0dHBzOi8vc3RhZ2luZy1uZXRhcHAtY2xvdWQtYWNjb3VudC5hdXRoM
+C5jb20vIiwic3ViIjoiYXV0aDB8NjA2YjY0NjdkMGUwNDMwMDY5NmYzYzNkIiwiYXVkIjpbImh0dHBzO
+i8vYXBpLmNsb3VkLm5ldGFwcC5jb20iXSwiaWF0IjoxNjM1MjQwMTM1LCJleHAiOjE2MzUyNjE3MzV9
+.mwavS7rJYUwMrnu0CL_8J3N-WJG2_UwdD3bplxAR-p6m8_2vZH8o4SjJAvaL3JwvQqcVHoh7YfyWd5TH
+SKQAJawGyTQnqdOdp_2lVbEYQdncGRe9Ve22rWEvWHHHCjr1xb8TKueYBCNgOkpl2LFlc3n3oOPqkf6I8</code></pre>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+            <h5 style="color: var(--text); margin-bottom: 0.5rem; font-size: 0.95rem;">HEADER: Algorithm & Token Type</h5>
+            <pre style="background: #f5f5f5; padding: 1rem; border-radius: 6px; overflow-x: auto;"><code>{
+  "alg": "RS256",
+  "typ": "JWT",
+  "kid": "MzU3QkI2RTExRjg5MDNDQjNFRUU3QUFBNTFBQTZC..."
+}</code></pre>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+            <h5 style="color: var(--text); margin-bottom: 0.5rem; font-size: 0.95rem;">PAYLOAD: Data</h5>
+            <pre style="background: #f5f5f5; padding: 1rem; border-radius: 6px; overflow-x: auto;"><code>{
+  "http://cloud.netapp.com/full_name": "&lt;full_name&gt;",
+  "http://cloud.netapp.com/email_verified": true,
+  "http://cloud.netapp.com/connection_id": "con_gPjfcs3cccczh4b",
+  "http://cloud.netapp.com/is_federated": false,
+  "http://cloud.netapp.com/internal": "NetApp",
+  "iss": "https://netapp-cloud-account.auth0.com/",
+  "sub": "auth0|606b6467d0e04300696f3c3d",
+  "aud": [
+    "https://api.cloud.netapp.com",
+    "https://netapp-cloud-account.auth0.com/userinfo"
+  ],
+  "iat": 1635240035,
+  "exp": 1635000735,
+  "azp": "FiivRZqxLWLjclCUyFmabZ71rfffffR14NT",
+  "scope": "openid profile email cc:update-password"
+}</code></pre>
+        </div>
+
+        <div>
+            <h5 style="color: var(--text); margin-bottom: 0.5rem; font-size: 0.95rem;">VERIFY SIGNATURE</h5>
+            <pre style="background: #f5f5f5; padding: 1rem; border-radius: 6px; overflow-x: auto;"><code>RSASHA256(
+  base64UrlEncode(header) + "." +
+  base64UrlEncode(payload)
+)</code></pre>
+        </div>
+
+        <div style="background: rgba(0, 102, 204, 0.08); padding: 1rem; border-radius: 6px; margin-top: 1.5rem;">
+            <p style="color: var(--text); margin: 0;">
+                <strong>💡 Security Note:</strong> The token signature ensures that the token hasn't been tampered with and validates both the issuer and the encoded message.
+            </p>
+        </div>
+    </div>
+</section>
+
+
 
             <section>
                 <h2>Key Results</h2>
@@ -2509,8 +2788,8 @@
                         <p style="color: var(--text-light); margin-top: 0.5rem;">User Satisfaction Increase</p>
                     </div>
                     <div class="contact-card">
-                        <h3 style="font-size: 2.5rem; color: var(--primary); margin: 0;">20%</h3>
-                        <p style="color: var(--text-light); margin-top: 0.5rem;">Readability Improvement</p>
+                        <h3 style="font-size: 2.5rem; color: var(--primary); margin: 0;">10%</h3>
+                        <p style="color: var(--text-light); margin-top: 0.5rem;">Editing Errors </p>
                     </div>
                     <div class="contact-card">
                         <h3 style="font-size: 2.5rem; color: var(--primary); margin: 0;">10%</h3>
