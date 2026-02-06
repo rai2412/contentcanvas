@@ -1,8 +1,0 @@
-Blog
-====
-
-Writeups in technical landscape.
-
-`Tech Canvas <https://raizcanvas.blogspot.com/>`_
-
-I created this blog in 20221 which captures my take on cryptocurrency, SEO, and other learnings I had while navigating through technoclogical landscape.
