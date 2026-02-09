@@ -1,0 +1,23 @@
+get started guide
+
+https://www.intel.com/content/www/us/en/docs/onednn/get-started-guide/2025-1/overview.html
+
+release notes
+
+https://www.intel.com/content/www/us/en/developer/articles/release-notes/oneapi-deep-neural-network-library-release-notes.html
+
+san host 
+
+install guide 
+https://docs.netapp.com/us-en/ontap-sanhost/hu_aix_61.html
+
+configuration guide
+https://docs.netapp.com/us-en/ontap-sanhost/hu_ubuntu_2004.html#step-1-optionally-enable-san-booting
+
+Backup and Recovery 
+Reference documentation 
+https://docs.netapp.com/us-en/console-automation/cbs/get-account-providers-cloudmanager_cbs-api-v1-backup-working-environment.html#response
+
+Troubleshooting guide 
+
+https://docs.netapp.com/us-en/ontap-sanhost/troubleshoot.html
