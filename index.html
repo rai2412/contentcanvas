@@ -4,8 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ranu Kundu — Technical Writer Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style-clean.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        /* Image overlay cards */
+        .work-card {
+            background-size: cover;
+            background-position: center;
+            color: white;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: relative;
+        }
+        
+        .work-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: inherit;
+            transition: background 0.3s ease;
+        }
+        
+        .work-card:hover::before {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .work-card h3,
+        .work-card .meta,
+        .work-card p {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .work-card h3 {
+            color: white;
+        }
+        
+        .work-card .meta {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .work-card p {
+            color: rgba(255, 255, 255, 0.85);
+        }
+        
+        /* Individual card backgrounds */
+        .work-card.about-card {
+            background-image: url('_images/about.png');
+        }
+        
+        .work-card.samples-card {
+            background-image: url('_images/projects.png');
+        }
+        
+        .work-card.resume-card {
+            background-image: url('_images/resume.png');
+        }
+        
+        .work-card.contact-card {
+            background-image: url('_images/contact.png');
+        }
+        
+        /* Fallback background if image is missing */
+        .work-card {
+            background-color: #f5f5f5;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -13,9 +83,10 @@
             <a href="#home" class="logo">Ranu Kundu</a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="projects.html">Writing Samples</a></li>
                 <li><a href="#resume">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="publications.html">Publication and Testimonials</a></li>
             </ul>
         </div>
     </nav>
@@ -27,47 +98,66 @@
             <div class="container">
                 <div class="hero">
                     <div class="profile-photo">
-                        <img src="profile.jfif" alt="Ranu Kundu" class="profile-photo">
+                        <img src="_images/ranukundu.jpg" alt="Ranu Kundu" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
                     </div>
                     <div class="hero-content">
                         <h1>Ranu Kundu</h1>
-                        <p class="subtitle">A technical writer and an engineer experienced in creating comprehensive and easy to use documentation. I'm a user advocate who strives to create documentation that is accessible and understandable on the first read. With a background in software development, I bring a strong technical foundation to technical writing and content strategy. </p>
+                        <h2>Technical Writer | Content Strategist | Developer Experience Professional</h2>
+                        <p class="intro">A technical writer and an engineer experienced in creating comprehensive and easy to use documentation. I'm a user advocate who strives to create documentation that is accessible and understandable on the first read. With a background in software development, I bring a strong technical foundation to technical writing and content strategy. I have worked in AI/ML performance libraries, cloud computing, and semiconductor industries.</p>
                     </div>
                 </div>
-
-                <div class="quick-nav">
-                    <a class="quick-nav-item" href="#projects">
-                        <strong>Projects and Writing Samples</strong>
+                <div class="social-links" style="display: flex; justify-content: center; gap: 2rem; margin: 2rem 0;">
+                    <a href="https://www.linkedin.com/in/ranukundu/" target="_blank" style="display: flex; align-items: center; gap: 0.5rem; color: #333; text-decoration: none; transition: color 0.2s;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        <span style="font-size: 0.9rem;">LinkedIn</span>
                     </a>
-                    <a class="quick-nav-item" href="#resume">
-                        <strong>Resume</strong>
+                    
+                    <a href="mailto:ranu.kundu@gmail.com" style="display: flex; align-items: center; gap: 0.5rem; color: #333; text-decoration: none; transition: color 0.2s;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/>
+                        </svg>
+                        <span style="font-size: 0.9rem;">Email</span>
                     </a>
-                    <a class="quick-nav-item" href="#contact">
-                        <strong>Contact</strong>
+                    
+                    <a href="tel:+353899483321" style="display: flex; align-items: center; gap: 0.5rem; color: #333; text-decoration: none; transition: color 0.2s;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"/>
+                        </svg>
+                        <span style="font-size: 0.9rem;">+353 899 483 321</span>
                     </a>
                 </div>
 
-                <section>
-                    <h2>Technical Skills</h2>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <h3>Documentation Tools</h3>
-                            <p>Sphinx, Oxygen XML Author, XMetal, Confluence, VSCode</p>
-                        </div>
-                        <div class="skill-item">
-                            <h3>Tech Stack</h3>
-                            <p>GitHub, Git, Jekyll, Markdown, DITA, AsciiDoc, RestructuredText, XML, YAML, JSON, HTML5, CSS3, Python</p>
-                        </div>
-                        <div class="skill-item">
-                            <h3>Programming</h3>
-                            <p>Python, JavaScript, familiar with C/C++, Java syntax</p>
-                        </div>
-                        <div class="skill-item">
-                            <h3>Design & UX Tools</h3>
-                            <p>Figma, Mural, Journey Mapping</p>
-                        </div>
-                    </div>
-                </section>
+                <div class="work-grid">
+                    <a href="#about" class="work-card about-card">
+                        <h3>About Me</h3>
+                        <div class="meta">Background & Experience</div>
+                        <p>Learn more about my professional journey, technical skills, and approach to documentation.</p>
+                    </a>
+
+                    <a href="projects.html" class="work-card samples-card">
+                        <h3>Writing Samples</h3>
+                        <div class="meta">Portfolio & Case Studies</div>
+                        <p>Explore my documentation projects across AI/ML, cloud computing, and developer tools.</p>
+                    </a>
+
+                    <a href="#resume" class="work-card resume-card">
+                        <h3>Resume</h3>
+                        <div class="meta">Professional Experience</div>
+                        <p>View my complete work history and accomplishments in technical writing.</p>
+                    </a>
+
+                    <a href="publications.html" class="work-card contact-card">
+                        <h3>Publications & Testimonials</h3>
+                        <div class="meta">Research & Recommendations</div>
+                        <p>View my published research work and testimonials from colleagues and managers.</p>
+                    </a>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e5e5e5; color: #999; font-size: 0.9rem;">
+                    Last updated: October 11, 2025
+                </div>
             </div>
         </div>
 
