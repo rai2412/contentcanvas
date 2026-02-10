@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications & Testimonials - Ranu Kundu</title>
+    <link rel="stylesheet" href="style-clean.css">
+    <style>
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .testimonial-card {
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.2s;
+        }
+        
+        .testimonial-card:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #999;
+            flex-shrink: 0;
+        }
+        
+        .testimonial-info {
+            flex: 1;
+        }
+        
+        .testimonial-name {
+            font-weight: 600;
+            color: #333;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .testimonial-title {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .testimonial-text {
+            color: #666;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+        
+        .publication-section {
+            background: #f9f9f9;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .publication-section h2 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .publication-section a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .publication-section a:hover {
+            text-decoration: underline;
+        }
+        
+        .publication-meta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+        
+        .publication-authors {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html#home" class="logo">Ranu Kundu</a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Writing Samples</a></li>
+                <li><a href="index.html#resume">Resume</a></li>
+                <li><a href="index.html#publications">Publications</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div style="margin: 2rem 0;">
+            <a href="index.html#home" style="color: #666; text-decoration: none; font-size: 0.95rem;">← Back to Home</a>
+        </div>
+
+        <h1 style="font-size: 2.5rem; margin-bottom: 2rem;">Publications & Testimonials</h1>
+
+        <!-- Publication Section -->
+        <section>
+            <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: #222;">Publication</h2>
+            
+            <div class="publication-section">
+                <h2>
+                    <a href="_samples/nacomm-2011-publication.pdf">An Online Interactive Computer Program for Pragmatic Design of Compliant Mechanisms</a>
+                </h2>
+                <p class="publication-meta">
+                    December 1-2, 2011 | 15th National Conference on Machines and Mechanisms (NaCoMM-2011), Indian Institute of Technology, Chennai, India
+                </p>
+                <p class="publication-authors">
+                    Authors: Kundu, R., Aravind, C. V., Hegde, S., and Ananthasuresh, G. K.
+                </p>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section style="margin-top: 4rem;">
+            <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: #222;">Testimonials</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">JD</div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Elena Fedotova</div>
+                            <div class="testimonial-title">Techical Writing and Content Strategy Manager @Intel</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "Ranu joined the Intel Technical Writing and Content Strategy Team in July 2024. She assumed responsibility for the documentation of strategic software products delivered as both proprietary and open-source distributions. Over the past year, Ranu has not only successfully ramped up on content development technologies and processes but also embraced content strategy practices. She developed and implemented a new UX- and analytics-driven architectural solution that effectively supports business-critical personas. I strongly recommend Ranu as a fast learner, a highly proficient technical writer, a talented content strategist, and an excellent communicator."
+                    </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">SM</div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Maciej Paczocha</div>
+                            <div class="testimonial-title">Senior Software Engineer @ Intel</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "I worked with Ranu on the documentation of the oneAPI Collective Communications Library (oneCCL). In particular, I was a software engineer and Ranu was the technical writer for the project.
+
+                        She was self-driven and often came up with ideas on how to improve the documentation and swiftly implemented them on her own. She had a very good command of English and was well-versed in the technical language. The documentation that she wrote was clear and easy to understand, requiring minimal proof-checking for technical correctness from the part of the developers. She was also very diligent and she carefully reviewed all the pieces of the documentation written by the developers, making very good suggestions about both: the content and the form. She knew her way around the programming tools used for doc creation and versioning , both: internal and external, including (but not limited to): reStructuredText, git/github, python. She was an expert on how the documentation was organized and released from the corporate point of view - in our case, this was a complex topic.
+
+                       In addition to the technical proficiency and expertise, she also has a very agreeable personality. I enjoyed working with her.
+
+                       I can highly recommend Ranu as a Technical Writer."
+                    </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">RP</div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Dr. Nagendra N</div>
+                            <div class="testimonial-title">Cyber AI & Product Engineering Senior Manager @ EY</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "I rarely come across real talents who stand out like Ranu. I had the pleasure of working with Ranu for a few months at the Packt, collaborating on several projects. Ranu's ability to handle multiple projects was unlike any I’ve seen before and made a dramatic increase in the productivity level of the project."
+                    </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">EK</div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Brandon Richey</div>
+                            <div class="testimonial-title">VP of Engineering @Applecart</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "I worked with Ranu on the production of a multi-author workshop book project. Ranu is an organized and driven editor, with a strong grasp on the technical aspects of the book that lent itself well to managing the details of a technical publication. She helped a lot with managing the flow of the project and also dealing with a project that had a lot of exceptional issues along the way that potentially could have disrupted the entire project, but kept them all on-track and prevented the project from disaster. I enjoyed working with her and can recommend her organizational and technical skills!"
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ranu Kundu. Technical Writer | Developer Documentation Specialist</p>
+        </div>
+    </footer>
+</body>
+</html>
