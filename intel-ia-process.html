@@ -35,175 +35,107 @@
         <h1>Information Architecture Redesign Process</h1>
         <h2 style="font-weight: 400; color: #666; margin-bottom: 3rem;">Intel oneAPI Deep Neural Network Library</h2>
 
-        <p style="font-size: 1.05rem; line-height: 1.8; color: #555; margin-bottom: 2rem;">This document outlines the comprehensive content strategy and information architecture redesign process I employed for the Intel oneAPI oneDNN documentation.</p>
+        <p style="font-size: 1.05rem; line-height: 1.8; color: #555; margin-bottom: 2rem;">Intel oneAPI Deep Neural Network Library (oneDNN) is a low-level AI performance library used to optimize deep learning applications running on CPUs and GPUs. 
+        As a technical writer for the library, I was assigned to examine the usability and functionality of the documentation. The problems I noticed with the library documentation were:
+
+          •	The library had fragmented information with tutorials, getting started information, code samples which was affecting the onboarding experience of the developers.
+          •	The library had topics organized around concepts, such as primitives, engines, streams, memory, objects, but were not task-oriented such as, get started, how to create oneDNN memory objects, and so on. 
+        </p>
+        <p style="font-size: 1.05rem; line-height: 1.8; color: #555; margin-bottom: 2rem;">
+        My Role
+
+        Being the content lead of the project, I developed a strategy framework that streamlined the onboarding experience for the library open-source users. 
+        * Collaborated with the UX researchers, to identify the friction points and usability issues. 
+        * Assessed user needs and align content with user journey and complies with user flow. 
+
+        </p>
 
         <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 3rem 0;">
 
         <section style="margin-bottom: 3rem;">
-            <h2>Step 1: Persona Analysis</h2>
-            <p>My first step was to understand the audience I'm writing for. I interviewed product and engineering teams at Intel to get an insight into the persona, understand their typical workflow to onboard and get started with the library.</p>
-            
-            <img src="images/persona2.png" alt="Developer persona showing typical workflow and pain points" style="width: 100%; max-width: 800px; margin: 2rem 0; border: 1px solid #e5e5e5; border-radius: 8px;">
-            
-            <p><strong>Key Activities:</strong></p>
-            <ul>
-                <li>Conducted stakeholder interviews with product managers and engineers</li>
-                <li>Identified primary user personas (ML researchers, AI framework engineers, performance optimization specialists)</li>
-                <li>Mapped typical user workflows and onboarding journeys</li>
-                <li>Documented pain points and information needs for each persona</li>
-            </ul>
-            
-            <p><strong>Outcome:</strong> Clear understanding of target audience needs and expectations</p>
-        </section>
-
-        <section style="margin-bottom: 3rem;">
-            <h2>Step 2: Content Audit</h2>
+            <h2>Step 1: Content Audit</h2>
             <p>I completed a comprehensive audit of existing documentation pages, identifying gaps, redundancies, outdated content, and areas with poor readability scores that caused friction during developer onboarding.</p>
             
-            <p><strong>Key Activities:</strong></p>
+            <img src="images/caudit.png" title="Content audit results" alt="Content audit results"style="width: 100%; max-width: 800px; margin: 2rem 0; border: 1px solid #e5e5e5; border-radius: 8px;">
+            
+            <p><strong>Few key insights:</strong></p>
             <ul>
-                <li>Reviewed all existing documentation pages</li>
-                <li>Identified content gaps and redundancies</li>
-                <li>Analyzed readability scores and technical accuracy</li>
-                <li>Documented user feedback and pain points</li>
-                <li>Assessed navigation and findability issues</li>
+                <li>Hardware support mixed with code snippets which signified inconsistent presentation that made scanning harder.</li>
+                <li>Visual diagrams are present only as static images without alt text or annotation.</li>
+                <li>Poor readability of technically complex onboarding materials </li>
             </ul>
             
-            <p><strong>Outcome:</strong> Comprehensive inventory of content issues and improvement opportunities</p>
-        </section>
+            </section>
 
         <section style="margin-bottom: 3rem;">
-            <h2>Step 3: Journey Mapping</h2>
-            <p>I created detailed developer journey maps for the key persona and mapped pain points and opportunities at each stage.</p>
+            <h2>Step 2: Persona Analysis</h2>
+            <p>I interviewed product and engineering teams to get an insight into the persona, understand their typical workflow to onboard and get started with the library. I collaborated with UX researchers to do a thorough persona analysis and later conducted usability studies which revealed the technical stack they are using, the architecture/components they are comfortable with, etc. The audience for this library can be categorized as, AI framework developers, AI application developers, data scientists. </p>
             
-            <img src="images/djm.png" alt="Developer journey map" style="width: 100%; max-width: 800px; margin: 2rem 0; border: 1px solid #e5e5e5; border-radius: 8px;">
-            
-            <p><strong>Key Activities:</strong></p>
+            <img src="images/persona2.png" title="Persona analysis template" alt="Persona analysis results"style="width: 100%; max-width: 800px; margin: 2rem 0; border: 1px solid #e5e5e5; border-radius: 8px;">
+            <img src="images/per.png" title="Persona analysis map" alt="Persona analysis map"style="width: 100%; max-width: 800px; margin: 2rem 0; border: 1px solid #e5e5e5; border-radius: 8px;">
+
+            <p><strong>Key Insights:</strong></p>
             <ul>
-                <li>Mapped the complete developer journey from discovery to advanced usage</li>
-                <li>Identified critical touchpoints and decision points</li>
-                <li>Documented pain points at each stage</li>
-                <li>Highlighted opportunities for content improvement</li>
-                <li>Created user story maps for different use cases</li>
+                <li>Benchmark document read like a man page with no guided workflow</li>
+                <li>The complexity in the technical stack caused user frustration</li>
+                <li>Users had to jump between multiple pages to find relevant information</li>
             </ul>
             
-            <p><strong>Outcome:</strong> Visual representation of user experience with clear improvement areas</p>
-        </section>
+            </section>
 
         <section style="margin-bottom: 3rem;">
-            <h2>Step 4: Competitive Analysis</h2>
+            <h2>Step 3: Competitive Analysis</h2>
             <p>I analyzed competitor documentation to identify best practices and opportunities for differentiation.</p>
             
-            <p><strong>Key Activities:</strong></p>
+            <img src="images/comanalysis.png" title="Competitive analysis results" alt="Competitive analysis results" style="width: 100%; max-width: 800px; margin: 2rem 0; border: 1px solid #e5e5e5; border-radius: 8px;">
+            
+            <p><strong>Key Insights:</strong></p>
             <ul>
-                <li>Reviewed documentation from PyTorch, TensorFlow, and other ML libraries</li>
-                <li>Analyzed information architecture approaches</li>
-                <li>Identified successful navigation patterns</li>
-                <li>Documented best practices in developer onboarding</li>
-                <li>Noted opportunities to differentiate oneDNN documentation</li>
+                <li>Clear separation of componentsnot visible with no architecture diagram</li>
+                <li>Documentation lacked task-based navigation</li>
             </ul>
             
-            <p><strong>Outcome:</strong> Industry benchmark and best practice reference</p>
         </section>
+
+        <section style="margin-bottom: 3rem;">
+            <h2>Step 4: Developer Journey Mapping</h2>
+            <p>I created a detailed developer journey map for the key persona mapping out all possibilities when completing a task which revealed the pain points and opportunities at each stage. This visual representation helped to align the product managers and engineering stakeholders on what is lacking and how the documentation can be improved. </p>
+            <img src="images/djm.png" title="Developer journey map" alt="Developer journey map" style="width: 100%; max-width: 800px; margin: 2rem 0; border: 1px solid #e5e5e5; border-radius: 8px;">
+       
+            </ul>
+            
+            
 
         <section style="margin-bottom: 3rem;">
             <h2>Step 5: Information Architecture Design and Building a Learning Path</h2>
-            <p>Designed new documentation structure using card sorting and tree testing with actual users. Organized content around user tasks rather than technical components.</p>
+            <p>With all the inputs from the previous steps, I collated the modules that can be created or updated and I designed a new documentation structure. I organized content around user tasks rather than technical components.</p>
             
             <img src="images/journeymap.png" alt="Information architecture and learning path" style="width: 100%; max-width: 800px; margin: 2rem 0; border: 1px solid #e5e5e5; border-radius: 8px;">
             
-            <p><strong>Key Activities:</strong></p>
+            <p><strong>Key Changes Made:</strong></p>
             <ul>
-                <li>Conducted card sorting exercises with developers</li>
-                <li>Performed tree testing to validate navigation structure</li>
-                <li>Reorganized content by user tasks and goals (not technical components)</li>
-                <li>Created clear learning paths for different personas</li>
-                <li>Designed progressive disclosure of technical complexity</li>
-                <li>Developed quick-start guides and tutorials</li>
+                <li>Reorganized content into task-based sections (e.g., Getting Started, Tutorials, API Reference)</li>
+                <li>Created a clear learning path for new users</li>
+                <li>Added visual diagrams to explain architecture and workflows</li>
+                <li>Improved readability with simplified language and formatting</li>
             </ul>
-            
-            <p><strong>Outcome:</strong> User-centered information architecture aligned with developer workflows</p>
-        </section>
 
+        
         <section style="margin-bottom: 3rem;">
-            <h2>Step 6: Implementation and Iteration</h2>
-            
-            <p><strong>Key Activities:</strong></p>
-            <ul>
-                <li>Restructured Getting Started section with step-by-step instructions</li>
-                <li>Created task-based navigation aligned with developer workflows</li>
-                <li>Wrote clear code examples for common use cases</li>
-                <li>Added troubleshooting guides based on user feedback</li>
-                <li>Implemented progressive disclosure of complex topics</li>
-            </ul>
-        </section>
+            <h2>Step 7: Measurement and Optimization</h2>
+            <p>I tracked key metrics (user satisfaction, page views, bounce rates) and continued optimizing content based on data insights.
+                Key Metrics Tracked:
+                •	User satisfaction scores (30% improvement)
+                •	Page readability scores (20% improvement)
+                •	Adoption rate (10% improvement)
+                •	Time to first success
+                •	Page views and bounce rates
 
-        <section style="margin-bottom: 3rem;">
-            <h2>Step 7: Measurement & Optimization</h2>
-            <p>I tracked key metrics (user satisfaction, page views, bounce rates) and continued optimizing content based on data insights.</p>
-            
+            </p>
+            <p>I created a visualization flow using Adobe Analytics to further track the entry points and exit paths.</p>
             <img src="images/analyticsmap.png" alt="Analytics dashboard" style="width: 100%; max-width: 800px; margin: 2rem 0; border: 1px solid #e5e5e5; border-radius: 8px;">
             
-            <p><strong>Key Metrics Tracked:</strong></p>
-            <ul>
-                <li>User satisfaction scores (30% improvement)</li>
-                <li>Page readability scores (20% improvement)</li>
-                <li>Adoption rate (10% improvement)</li>
-                <li>Time to first success</li>
-                <li>Page views and bounce rates</li>
-                <li>Search effectiveness</li>
-            </ul>
-            
-            <p><strong>Outcome:</strong> Data-driven continuous improvement cycle</p>
-        </section>
-
-        <section style="margin-bottom: 3rem;">
-            <h2>Tools and Methodologies Used</h2>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0;">
-                <div>
-                    <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">UX Research:</h3>
-                    <ul style="margin-left: 1.5rem; color: #666;">
-                        <li>User interviews</li>
-                        <li>Card sorting</li>
-                        <li>Tree testing</li>
-                        <li>Journey mapping</li>
-                        <li>Usability testing</li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Content Strategy:</h3>
-                    <ul style="margin-left: 1.5rem; color: #666;">
-                        <li>Content audit</li>
-                        <li>Competitive analysis</li>
-                        <li>Information architecture design</li>
-                        <li>Content modeling</li>
-                        <li>Progressive disclosure</li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Analytics:</h3>
-                    <ul style="margin-left: 1.5rem; color: #666;">
-                        <li>Google Analytics</li>
-                        <li>User satisfaction surveys</li>
-                        <li>Readability analysis tools</li>
-                        <li>A/B testing</li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Documentation Tools:</h3>
-                    <ul style="margin-left: 1.5rem; color: #666;">
-                        <li>Sphinx</li>
-                        <li>RestructuredText</li>
-                        <li>Git/GitHub</li>
-                        <li>VSCode</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+           
 
         <section style="margin-bottom: 3rem; padding: 2rem; background: #f5f5f5; border-radius: 8px;">
             <h2>Results Summary</h2>
